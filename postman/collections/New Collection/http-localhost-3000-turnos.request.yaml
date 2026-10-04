@@ -1,0 +1,24 @@
+$kind: http-request
+name: http://localhost:3000/turnos
+description: ""
+url: http://localhost:3000/turnos
+method: GET
+body:
+  type: json
+  content: '{ "paciente": "Juan Pérez" }'
+scripts:
+  - type: afterResponse
+    code: "pm.test(\"Status code es 200 OK\", function () {\r
+
+      \    pm.response.to.have.status(200);\r
+
+      });\r
+
+      pm.test(\"Respuesta correcta con lista de datos\", function () {\r
+
+      \    pm.response.to.be.json;\r
+
+      });"
+    language: text/javascript
+examples: .resources/http-localhost-3000-turnos.resources/examples
+order: 1790985496586

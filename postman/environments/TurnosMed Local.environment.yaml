@@ -1,0 +1,4 @@
+name: TurnosMed Local
+values:
+  - key: baseUrl
+    value: ''

@@ -1,0 +1,16 @@
+$kind: http-example
+name: http://localhost:3000/turnos
+description: ""
+request:
+  url: http://localhost:3000/turnos
+  method: GET
+  body:
+    type: json
+    content: '{ "paciente": "Juan Pérez" }'
+response:
+  statusCode: 200
+  statusText: ""
+  body:
+    type: json
+    content: ""
+order: 706325990866737
